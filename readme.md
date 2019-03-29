@@ -13,7 +13,6 @@ npm install @strong-roots-capital/until
 ```typescript
 import { until } from '@strong-roots-capital/until'
 
-
 test('should await until event', async t => {
     class TestClient extends EventEmitter {
         open = false
