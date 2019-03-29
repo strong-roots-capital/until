@@ -1,6 +1,6 @@
 # until [![Build status](https://travis-ci.org/strong-roots-capital/until.svg?branch=master)](https://travis-ci.org/strong-roots-capital/until) [![npm version](https://img.shields.io/npm/v/@strong-roots-capital/until.svg)](https://npmjs.org/package/@strong-roots-capital/until) [![codecov](https://codecov.io/gh/strong-roots-capital/until/branch/master/graph/badge.svg)](https://codecov.io/gh/strong-roots-capital/until)
 
-> Await until event or callback
+> Await until event
 
 ## Install
 
@@ -12,13 +12,26 @@ npm install @strong-roots-capital/until
 
 ```typescript
 import { until } from '@strong-roots-capital/until'
-// TODO: describe usage
+
+
+test('should await until event', async t => {
+    class TestClient extends EventEmitter {
+        open = false
+        constructor() {
+            super()
+            setTimeout(() => {
+                this.open = true
+                this.emit('open')
+            }, 100)
+        }
+    }
+    const client = new TestClient()
+    await until(client, 'open')
+    t.true(client.open)
+})
+
 ```
 
 ## Related
 
-TODO
-
-## Acknowledgments
-
-TODO
+- [barrier](https://github.com/strong-roots-capital/barrier)

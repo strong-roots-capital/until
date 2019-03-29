@@ -39,6 +39,7 @@
   },
   "homepage": "https://github.com/strong-roots-capital/until",
   "dependencies": {
+    "@strong-roots-capital/barrier": "^1.0.0",
     "@types/node": "^10.12.18",
     "typescript": "^3.2.2"
   },
