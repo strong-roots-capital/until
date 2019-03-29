@@ -56,7 +56,7 @@ Related
 
 ▸ **until**(emitter: *`EventEmitter`*, event: *`string` \| `symbol`*): `Promise`<`void`>
 
-*Defined in [until.ts:16](https://github.com/strong-roots-capital/until/blob/817c8ce/src/until.ts#L16)*
+*Defined in [until.ts:16](https://github.com/strong-roots-capital/until/blob/d63b156/src/until.ts#L16)*
 
 Await until `emitter` fires `event`.
 
