@@ -3,8 +3,11 @@
  * Await until event
  */
 
-import { EventEmitter } from 'events'
 import makeBarrier from '@strong-roots-capital/barrier'
+
+interface EmitterLike {
+    once(event: string | symbol | string[], listener: (...args: any[]) => void): this
+}
 
 
 /**
@@ -13,7 +16,7 @@ import makeBarrier from '@strong-roots-capital/barrier'
  * @param emitter - EventEmitter to monitor
  * @param event - Event on which to resolve promise
  */
-export async function until(emitter: EventEmitter, event: string | symbol) {
+export async function until(emitter: EmitterLike, event: string | symbol) {
     const barrier = makeBarrier()
     emitter.once(event, barrier)
     await barrier()

@@ -2,6 +2,11 @@
 
 > Await until event
 
+Compatible with
+
+- EventEmitter
+- [EventEmitter2](https://github.com/EventEmitter2/EventEmitter2)
+
 ## Install
 
 ```shell
