@@ -1,6 +1,6 @@
 {
   "name": "@strong-roots-capital/until",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Await until event or callback",
   "main": "dist/until.js",
   "types": "dist/until.d.ts",
